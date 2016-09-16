@@ -1,21 +1,21 @@
 <?php
 
-namespace YT;
+namespace GZ;
 
 /**
- * Автозагрузчик для пространства YT
+ * Автозагрузчик для пространства GZ
  *
  * Class AutoLoader
  *
  * @author Roman Kulichkov <roman@kulichkov.pro>
  *
- * @package YT
+ * @package GZ
  */
 class AutoLoader
 {
 	const DEBUG_MODE = false;
 
-	const PROJECT_NAMESPACE = 'YT';
+	const PROJECT_NAMESPACE = 'GZ';
 
 	static private $recursiveSearch = true;
 
@@ -114,7 +114,7 @@ class AutoLoader
 	 */
 	private static function logToFile($data)
 	{
-		$file = fopen(self::getBasePath() . '/YTAutoLoad.log', 'a');
+		$file = fopen(self::getBasePath() . '/GZAutoLoad.log', 'a');
 
 		flock($file, LOCK_EX);
 		fwrite($file, date('d.m.Y H:i:s') . ': ' . $data . PHP_EOL);
