@@ -5,28 +5,76 @@
 \YT\Environment\EnvironmentManager::getInstance()->addConfig(
 	new \YT\Environment\Configuration\CommonConfiguration(
 		array(
-			'catalogIBlockId' => 3,
-			'defaultSiteTemplateUrl' => '/local/templates/.default/',
+			'catalogIBlockType'      => 'dynamic_content',
+			'catalogIBlockId'        => 3,
+			'catalogUrl'             => '/catalog/',
+			'defaultSiteTemplateUrl' => '/local/templates/yal_landing_page_s1/',
+			'authPageUrl'            => '/personal/profile/',
+			'registerPageUrl'        => '/auth/?register=yes',
+			'forgotPassPageUrl'      => '/auth/?forgot_password=yes',
+
+			'pageClassesTemplates'   => array(
+				'/personal/profile/' => 'private user-info',
+				'/personal/'         => 'private',
+			),
+
+			'bodyClassesTemplates'   => array(
+				'404' => 'p404',
+			),
+
+			'w250crPlugId' => '',
+			'w146crPlugId' => '',
+			'w362whPlugId' => '',
+			'w50whPlugId'  => '',
 		)
 	)
 );
 
 if(\Bitrix\Main\Loader::includeModule('itconstruct.resizer'))
 {
-    itc\Resizer::addPreset('interiorDetail', array(
-            'mode' => 'width',
-            'width' => '1200',
-            'height' => null,
-            'type' => 'jpg'
-        )
-    );
-    itc\Resizer::addPreset('interiorPreview', array(
-            'mode' => 'crop',
-            'width' => '200',
-            'height' => '168',
-            'type' => 'jpg'
-        )
-    );
+	itc\Resizer::addPreset('w146cr', array(
+			'mode' => 'crop',
+			'width' => 146,
+			'height' => 146,
+			'type' => 'jpg'
+		)
+	);
+	itc\Resizer::addPreset('w250cr', array(
+			'mode' => 'crop',
+			'width' => 250,
+			'height' => 250,
+			'type' => 'jpg'
+		)
+	);
+	itc\Resizer::addPreset('w362wh', array(
+			'mode' => 'crop',
+			'width' => 362,
+			'height' => 295,
+			'type' => 'jpg'
+		)
+	);
+	itc\Resizer::addPreset('w50cr', array(
+			'mode' => 'crop',
+			'width' => 50,
+			'height' => 50,
+			'type' => 'jpg'
+		)
+	);
+
+	itc\Resizer::addPreset('interiorDetail', array(
+			'mode' => 'width',
+			'width' => '1200',
+			'height' => null,
+			'type' => 'jpg'
+		)
+	);
+	itc\Resizer::addPreset('interiorPreview', array(
+			'mode' => 'crop',
+			'width' => '200',
+			'height' => '168',
+			'type' => 'jpg'
+		)
+	);
 	itc\Resizer::addPreset('exteriorDetail', array(
 			'mode' => 'width',
 			'width' => '1024',
@@ -272,4 +320,3 @@ if(\Bitrix\Main\Loader::includeModule('itconstruct.resizer'))
 		)
 	);
 }
-

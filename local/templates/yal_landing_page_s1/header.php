@@ -8,6 +8,11 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->ShowHead();?>
 		<title><?$APPLICATION->ShowTitle();?></title>
 
+		<?
+		$environment = \YT\Environment\EnvironmentManager::getInstance();
+		$defaultSiteTemplateUrl = $environment->get('defaultSiteTemplateUrl');
+		?>
+
 		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" /> 	
 
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/fancybox/jquery.fancybox.css")?>
@@ -53,16 +58,16 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	                        ));?>
 	                    </div>
 	                    <?$APPLICATION->IncludeComponent("bitrix:menu", "top", Array(
-	                    	"ROOT_MENU_TYPE" => "top",  // Тип меню для первого уровня
-	                        "MAX_LEVEL" => "1", // Уровень вложенности меню
-	                        "CHILD_MENU_TYPE" => "top", // Тип меню для остальных уровней
-	                        "USE_EXT" => "Y",   // Подключать файлы с именами вида .тип_меню.menu_ext.php
-	                        "DELAY" => "N", // Откладывать выполнение шаблона меню
-	                        "ALLOW_MULTI_SELECT" => "Y",    // Разрешить несколько активных пунктов одновременно
-	                        "MENU_CACHE_TYPE" => "N",   // Тип кеширования
-	                        "MENU_CACHE_TIME" => "360000",  // Время кеширования (сек.)
-	                        "MENU_CACHE_USE_GROUPS" => "N", // Учитывать права доступа
-	                        "MENU_CACHE_GET_VARS" => "",    // Значимые переменные запроса
+	                    	"ROOT_MENU_TYPE" => "top",  // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	                        "MAX_LEVEL" => "1", // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	                        "CHILD_MENU_TYPE" => "top", // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	                        "USE_EXT" => "Y",   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ .пїЅпїЅпїЅ_пїЅпїЅпїЅпїЅ.menu_ext.php
+	                        "DELAY" => "N", // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	                        "ALLOW_MULTI_SELECT" => "Y",    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	                        "MENU_CACHE_TYPE" => "N",   // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	                        "MENU_CACHE_TIME" => "360000",  // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ.)
+	                        "MENU_CACHE_USE_GROUPS" => "N", // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	                        "MENU_CACHE_GET_VARS" => "",    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	                    ),
 	                    false,
 	                    array("HIDE_ICONS" => "N")
@@ -197,7 +202,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 								"CACHE_GROUPS" => "N",
 								"DISPLAY_TOP_PAGER" => "N",
 								"DISPLAY_BOTTOM_PAGER" => "N",
-								"PAGER_TITLE" => "Новости",
+								"PAGER_TITLE" => "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
 								"PAGER_SHOW_ALWAYS" => "N",
 								"PAGER_TEMPLATE" => "",
 								"PAGER_DESC_NUMBERING" => "N",
@@ -289,7 +294,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 						"CACHE_GROUPS" => "N",
 						"DISPLAY_TOP_PAGER" => "N",
 						"DISPLAY_BOTTOM_PAGER" => "N",
-						"PAGER_TITLE" => "Новости",
+						"PAGER_TITLE" => "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
 						"PAGER_SHOW_ALWAYS" => "N",
 						"PAGER_TEMPLATE" => "",
 						"PAGER_DESC_NUMBERING" => "N",
@@ -393,7 +398,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 						"CACHE_GROUPS" => "N",
 						"DISPLAY_TOP_PAGER" => "N",
 						"DISPLAY_BOTTOM_PAGER" => "N",
-						"PAGER_TITLE" => "Новости",
+						"PAGER_TITLE" => "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
 						"PAGER_SHOW_ALWAYS" => "N",
 						"PAGER_TEMPLATE" => "",
 						"PAGER_DESC_NUMBERING" => "N",
@@ -448,4 +453,3 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 					</div>
 				</div>
 	
-						

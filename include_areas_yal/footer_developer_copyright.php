@@ -1,0 +1,1 @@
+<a href="http://www.yalstudio.ru" target="_blank" class="footer-developer__link">Создание сайтов, продвижение сайтов — </a>
