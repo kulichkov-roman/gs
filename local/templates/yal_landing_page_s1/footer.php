@@ -6,6 +6,21 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     </div>
     <div class="page-footer">
         <div class="layout-positioner">
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "bottom", Array(
+                "ROOT_MENU_TYPE" => "top",
+                "MAX_LEVEL" => "1",
+                "CHILD_MENU_TYPE" => "top",
+                "USE_EXT" => "Y",
+                "DELAY" => "N",
+                "ALLOW_MULTI_SELECT" => "Y",
+                "MENU_CACHE_TYPE" => "N",
+                "MENU_CACHE_TIME" => "360000",
+                "MENU_CACHE_USE_GROUPS" => "N",
+                "MENU_CACHE_GET_VARS" => "",
+                ),
+                false,
+                array("HIDE_ICONS" => "N")
+            );?>
             <div class="footer-copyright">
                 <?$APPLICATION->IncludeComponent(
                 "bitrix:main.include", "",

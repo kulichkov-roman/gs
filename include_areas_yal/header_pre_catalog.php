@@ -2,42 +2,38 @@
 	<ul class="category__list">
 		<li class="category__item">
 			<div class="category__text">
-				Работаем с перевозками с
-				<strong>1998</strong>
-				<span>года</span>
+				<strong>1927 мм</strong>
+				<span>максимальная высота грузового отсека</span>
 			</div>
 		</li>
 		<li class="category__item">
 			<div class="category__text">
-				Автомобилями пройдено
-				<strong>973 613</strong>
-				<span>километра</span>
+				<strong>149,6 л.с.</strong>
+				<span>максимальная мощность двигателя</span>
 			</div>
 		</li>
 		<li class="category__item">
 			<div class="category__text">
-				Гарантируем доставку
-				<strong>100%</strong>
-				<span>затраховано</span>
+				<strong>до 13,5 м<sup>3</sup></strong>
+				<span>полезный<br> объем <br>кузова</span>
 			</div>
 		</li>
 		<li class="category__item">
 			<div class="category__text">
-				Есть все разрешения
-				<strong>14</strong>
-				<span>лицензий</span>
+				<strong>3631 мм</strong>
+				<span>максимальная длина грузового отсека</span>
 			</div>
 		</li>
 		<li class="category__item">
 			<div class="category__text">
-				Водители с общим опытом
-				<strong>427</strong>
-				<span>лет</span>
+				<strong>3 года</strong>
+				<span>или <br>150 000 км <br>гарантии</span>
 			</div>
 		</li>
 	</ul>
 </div>
 <div class="catalog__note">
-	Сомневаетесь, потому что не работали с нами раньше?
-	<strong>Предлагаем скидку 30% и бесплатную страховку грузов и сроков!</strong>
+	<img src="<?=SITE_TEMPLATE_PATH?>/pictures/auto-of-2016.png" align="left">
+	По итогам Национальной Премии «Автомобиль года в России 2016»
+	<strong>автомобиль ГАЗель Next стал лидером <br>в номинации «Фургоны» </strong>
 </div>

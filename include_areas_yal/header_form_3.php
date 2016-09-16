@@ -12,7 +12,7 @@
 			<input type="email" name="email" class="form__input_text" placeholder="Электронная почта">
 		</li>
 		<li class="form__item form__item_button">
-			<input type="submit" class="form__submit btn" value="Отправить заявку">
+			<input type="submit" class="form__submit btn" value="Отправить">
 		</li>
 	</ul>
 </form>

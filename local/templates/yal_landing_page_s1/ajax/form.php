@@ -34,7 +34,6 @@ if(check_bitrix_sessid())
 	);
 	$json["form_type"] = intval($_POST["type"]);
 
-	//
 	if ($elementId = $obNewElement->Add($arAddFields))
 	{
 		$json['element_id'] = $elementId;

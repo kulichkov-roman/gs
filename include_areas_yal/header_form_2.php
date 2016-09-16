@@ -12,7 +12,7 @@
 			<input type="tel" name="phone" class="form__input_text" placeholder="Телефон">
 		</li>                                
 		<li class="form__item form__item_button">
-			<input type="submit" class="form__submit btn" value="Бронировать">
+			<input type="submit" class="form__submit btn" value="Отправить">
 		</li>
 	</ul>
 </form>

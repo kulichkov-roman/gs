@@ -3,8 +3,8 @@ foreach($arResult["ITEMS"] as $key => $arItem){
 	$arItem["DISPLAY_PREVIEW_PICTURE"] = CFile::ResizeImageGet(
 		$arItem["PREVIEW_PICTURE"]["ID"],
 		array(
-			"width" => 182,
-			"height" => 201
+			"width" => 475,
+			"height" => 213
 		),
 		BX_RESIZE_IMAGE_EXACT
 	);
