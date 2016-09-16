@@ -1,21 +1,21 @@
 <?php
 
-namespace GZ;
+namespace GS;
 
 /**
- * Автозагрузчик для пространства GZ
+ * Автозагрузчик для пространства GS
  *
  * Class AutoLoader
  *
  * @author Roman Kulichkov <roman@kulichkov.pro>
  *
- * @package GZ
+ * @package GS
  */
 class AutoLoader
 {
 	const DEBUG_MODE = false;
 
-	const PROJECT_NAMESPACE = 'GZ';
+	const PROJECT_NAMESPACE = 'GS';
 
 	static private $recursiveSearch = true;
 
@@ -114,7 +114,7 @@ class AutoLoader
 	 */
 	private static function logToFile($data)
 	{
-		$file = fopen(self::getBasePath() . '/GZAutoLoad.log', 'a');
+		$file = fopen(self::getBasePath() . '/GSAutoLoad.log', 'a');
 
 		flock($file, LOCK_EX);
 		fwrite($file, date('d.m.Y H:i:s') . ': ' . $data . PHP_EOL);
