@@ -298,5 +298,5 @@ endif;
 	});
 </script>
 <?
-include(__DIR__."/form.php");
+include(__DIR__ . "/form.php");
 ?>
