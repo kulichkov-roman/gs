@@ -1,0 +1,14 @@
+.fact_summa{
+	color: #c5ce28;
+	font-size: 14px;
+}
+.fact_summa span{
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.orderlist .orderlist__number-cell {
+  width: 180px !important; }
+
+.orderlist .orderlist__summ-cell {
+  width: 150px !important; }
