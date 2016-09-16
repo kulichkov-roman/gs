@@ -1,27 +1,25 @@
-var popUpSettings = {
-        padding: 10,
-        openEffect: 'elastic',
-        openSpeed: 250,
-        closeEffect: 'elastic',
-        closeSpeed: 250,
-        closeClick: true,
-        wrapCSS: 'my-fancybox',
-        titlePosition: 'inside',
-        helpers: {
-             overlay: {
-                    locked: false
-             },
-             title : {
-                type : 'inside'
-            }
-        }
-};
 $(document).ready(function() {
 	
 	// fancybox
 	
 	$('.fancybox').fancybox({
-        popUpSettings
+		padding: 10,
+		openEffect: 'elastic',
+		openSpeed: 250,
+		closeEffect: 'elastic',
+		closeSpeed: 250,
+		closeClick: true,
+		wrapCSS: 'my-fancybox',
+		titlePosition: 'inside',
+		helpers: {
+		     overlay: {
+		            locked: false
+		     },
+		     title : {
+	            type : 'inside'
+	        }
+		}
+ 		
 	});
 		
 	if(typeof $.fancybox.defaults != 'undefined'){
