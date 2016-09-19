@@ -27,7 +27,9 @@ $this->setFrameMode(true);	?>
 								<?}?>
 							</ul>
 						</div>
-						<a href="#">Технические характеристики в pdf</a><br><br>
+						<?if($arItem["PROPERTIES"]["FILE"]["VALUE"]){?>
+							<a target="_blank" href="<?=CFile::GetPath($arItem["PROPERTIES"]["FILE"]["VALUE"]);?>">Технические характеристики в pdf</a><br><br>
+						<?}?>
 						<input type="submit" class="form__submit btn2" value="Заказать">
 					</div>
 				</div>
