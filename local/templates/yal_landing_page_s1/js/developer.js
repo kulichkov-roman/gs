@@ -28,7 +28,7 @@ $(document).ready(function() {
 	});
 	
 	
-	//$('.js__pop-up').fancybox(popupSettings);
+	$('.js__pop-up').fancybox(popupSettings);
 });
 
 function showSuccessPopup(objResponse, statusText, xhr, $form){
