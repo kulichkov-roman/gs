@@ -1,6 +1,7 @@
 <form action="<?=SITE_TEMPLATE_PATH."/ajax/form.php"?>" method="post" class="form-catalog-request js__form-catalog-request ajax_form">
 	<input name="type" type="hidden" value="80"/>
 	<?=bitrix_sessid_post()?>
+	<div class="success_block"></div>
 	<ul class="form__list">
 		<li class="form__item">
 			<input type="text" name="name" class="form__input_text" placeholder="Имя">

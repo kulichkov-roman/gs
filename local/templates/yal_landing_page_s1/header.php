@@ -8,9 +8,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		<?$APPLICATION->ShowHead();?>
 		<title><?$APPLICATION->ShowTitle();?></title>
 
-		<?
-		$environment = \YT\Environment\EnvironmentManager::getInstance();
-		?>
+		<?$environment = \YT\Environment\EnvironmentManager::getInstance();?>
 
 		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" /> 	
 
@@ -147,7 +145,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 									"bitrix:main.include", "",
 									Array(
 										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_DIR ."include_areas_yal/header_form_2_title.php"
+										"PATH" => SITE_DIR ."include_areas_yal/header_form_2_1_title.php"
 									),
 									false,
 									array(
@@ -183,8 +181,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 							)
 						);?>
 						<?$APPLICATION->IncludeComponent(
-							"bitrix:news.list", 
-							"autopark", 
+							"bitrix:news.list",
+							"autopark",
 							array(
 								"AJAX_MODE" => "N",
 								"IBLOCK_TYPE" => "-",
@@ -200,13 +198,25 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 									1 => "",
 								),
 								"PROPERTY_CODE" => array(
-									0 => "CAPACITY",
-									1 => "LENGTH",
-									2 => "MODEL",
-									3 => "WIDTH",
-									4 => "",
-									5 => "",
-									6 => "",
+									0 => "AMORT",
+									1 => "CAPACITY",
+									2 => "DVIGATEL",
+									3 => "LENGTH",
+									4 => "KATEGORIA",
+									5 => "MESTA",
+									6 => "KORPERED",
+									7 => "MODEL",
+									8 => "MASSA",
+									9 => "MODIFIKACIA",
+									10 => "POGRUZ",
+									11 => "PODVESKA",
+									12 => "PRIVOD",
+									13 => "RULMEH",
+									14 => "SCEPLENIE",
+									15 => "TORMOZA",
+									16 => "SHINI",
+									17 => "WIDTH",
+									18 => "",
 								),
 								"CHECK_DATES" => "N",
 								"DETAIL_URL" => "",
@@ -258,7 +268,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 								"bitrix:main.include", "",
 								Array(
 									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR ."include_areas_yal/header_form_2_title.php"
+									"PATH" => SITE_DIR ."include_areas_yal/header_form_2_2_title.php"
 								),
 								false,
 								array(
@@ -352,7 +362,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 									"bitrix:main.include", "",
 									Array(
 										"AREA_FILE_SHOW" => "file",
-										"PATH" => SITE_DIR ."include_areas_yal/header_form_2_title.php"
+										"PATH" => SITE_DIR ."include_areas_yal/header_form_2_3_title.php"
 									),
 									false,
 									array(
