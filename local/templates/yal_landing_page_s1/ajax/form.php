@@ -17,6 +17,13 @@ if(check_bitrix_sessid())
 		$_POST = $arNewPost;
 	}
 
+	$arAvailableForms = array(
+		'top79_1'    => 'Успей заказать',
+		'center80_1' => 'Узнайте выгодные условия приобретения',
+		'center80_2' => 'Запишитесь на тест-драйв',
+		'center80_3' => 'Получите специальное предложение',
+		'autopark_1' => htmlspecialcharsbx($_REQUEST['type']),
+	);
 	
 	CModule::IncludeModule("iblock");
 	$obNewElement = new CIBlockElement;
@@ -29,9 +36,11 @@ if(check_bitrix_sessid())
 
 	$arAddFields["PROPERTY_VALUES"] = array(
 		"TYPE" => intval($_POST["type"]),
-		"PHONE" => $_POST["phone"],
-		"MAIL" => $_POST["email"]
+		"PHONE" => htmlspecialcharsbx($_POST["phone"]),
+		"MAIL" => htmlspecialcharsbx($_POST["email"]),
+		"FORM_NAME" => $arAvailableForms[$_REQUEST["formId"]],
 	);
+
 	$json["form_type"] = intval($_POST["type"]);
 
 	if ($elementId = $obNewElement->Add($arAddFields))
@@ -46,6 +55,7 @@ if(check_bitrix_sessid())
 		$arMailFields["PHONE"] = $arElement["PROPERTIES"]["PHONE"]["VALUE"];
 		$arMailFields["MAIL"] = $arElement["PROPERTIES"]["MAIL"]["VALUE"];
 		$arMailFields["TYPE"] = $arElement["PROPERTIES"]["TYPE"]["VALUE"];
+		$arMailFields["FORM_NAME"] = $arAvailableForms[$_REQUEST["formId"]];
 
 		// Admin link
 		$rsIblock = CIBlock::GetByID($arElement['IBLOCK_ID']);

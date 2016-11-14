@@ -1,6 +1,7 @@
 <form action="<?=SITE_TEMPLATE_PATH."/ajax/form.php"?>" method="post" class="form-request js__form-request ajax_form">
 	<?=bitrix_sessid_post()?>
 	<input name="type" type="hidden" value="79"/>
+	<input name="formId" type="hidden" value="top79_1"/>
 	<div class="success_block"></div>
 	<ul class="form__list">
 		<li class="form__item">

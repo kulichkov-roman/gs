@@ -35,6 +35,7 @@ $this->setFrameMode(true);
 								<form action="/local/templates/yal_landing_page_s1/ajax/form.php" method="post" class="form-request js__form-request ajax_form">
 									<?=bitrix_sessid_post()?>
 									<input name="type" value="Заявка на покупку <?=$arItem["NAME"]?>" type="hidden">
+									<input name="formId" type="hidden" value="autopark_1"/>
 									<ul class="form__list">
 										<li class="form__item">
 											<input name="name" class="form__input_text" placeholder="Имя" type="text">

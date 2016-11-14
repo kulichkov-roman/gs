@@ -41,6 +41,8 @@ $(document).ready(function() {
     
     $('.js__form-consultation').validate();
     
+	//$("input[name='phone']").mask('+7 (999) 999-99-99');
+	
     // scroll
     
     $('.header-menu__link').on('click', function(e) {

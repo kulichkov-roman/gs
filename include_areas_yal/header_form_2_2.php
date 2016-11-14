@@ -1,7 +1,7 @@
 <form action="<?=SITE_TEMPLATE_PATH."/ajax/form.php"?>" method="post" class="form-catalog-request js__form-catalog-request ajax_form">
 	<?=bitrix_sessid_post()?>
 	<input name="type" type="hidden" value="80"/>
-	<input name="formId" type="hidden" value="center80_1"/>
+	<input name="formId" type="hidden" value="center80_3"/>
 	<div class="success_block"></div>
 	<ul class="form__list">
 		<li class="form__item">

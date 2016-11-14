@@ -10,7 +10,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
 		<?$environment = \YT\Environment\EnvironmentManager::getInstance();?>
 
-		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" /> 	
+		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" />
 
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/fancybox/jquery.fancybox.css")?>
 	    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/fancybox/helpers/jquery.fancybox-buttons.css")?>
@@ -33,6 +33,31 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	    
 		<meta name="ktoprodvinul" content="f23be9b2b6271327" />
 		<meta name="cmsmagazine" content="38d2170328e981e4d60ee986faaa509f" />
+
+		<?
+		$APPLICATION->IncludeComponent(
+			"bitrix:main.include", "",
+			Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => SITE_DIR ."include_areas_yal/yandex_metrika.php"
+			),
+			false,
+			array(
+				"HIDE_ICONS" => "N"
+			)
+		);
+		$APPLICATION->IncludeComponent(
+			"bitrix:main.include", "",
+			Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => SITE_DIR ."include_areas_yal/jivosite.php"
+			),
+			false,
+			array(
+				"HIDE_ICONS" => "N"
+			)
+		);
+		?>
 	</head>
 	<body>
 		<div id="panel">
@@ -279,7 +304,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 							"bitrix:main.include", "",
 							Array(
 								"AREA_FILE_SHOW" => "file",
-								"PATH" => SITE_DIR ."include_areas_yal/header_form_2.php"
+								"PATH" => SITE_DIR ."include_areas_yal/header_form_2_1.php"
 							),
 							false,
 							array(
@@ -374,7 +399,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 								"bitrix:main.include", "",
 								Array(
 									"AREA_FILE_SHOW" => "file",
-									"PATH" => SITE_DIR ."include_areas_yal/header_form_2.php"
+									"PATH" => SITE_DIR ."include_areas_yal/header_form_2_2.php"
 								),
 								false,
 								array(

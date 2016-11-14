@@ -1,6 +1,6 @@
 "use strict"
 
-var popupSettings = {
+var popUpSettings = {
     margin: [10, 10, 10, 10],
     padding: 0,
     wrapCSS: 'my-fancybox',
@@ -28,17 +28,37 @@ $(document).ready(function() {
 	});
 	
 	
-	$('.js__pop-up').fancybox(popupSettings);
+	$('.js__pop-up').fancybox(popUpSettings);
+
+
+
+	$(function () {
+
+		$(window).load(function () {
+			if($('.js-roistat-email').length>0){
+				var email=$('.js-roistat-email').html();
+				var input='<input type="hidden" value="'+email+'" name="roistat_mail_client">';
+				$('form').append(input);
+			}
+		});
+
+	});
+
 });
 
 function showSuccessPopup(objResponse, statusText, xhr, $form){
 	if(objResponse.element_id){
-		//$.fancybox($('#success-popup'), popUpSettings);
 
-		$(".success_block").prepend(document.createTextNode("Спасибо ваша заявка отправлена!"));
+		$.fancybox($('#success-popup'), popUpSettings);
+
+		//$(".success_block").prepend(document.createTextNode("Спасибо ваша заявка отправлена!"));
 
 		$form.trigger("reset");
 		$form.trigger("clear");
+
+		yaCounter40774559.reachGoal('zayavka');
+		ga('send', 'event', 'conv', 'zayavka');
+		
 	} else {
 		
 	}
